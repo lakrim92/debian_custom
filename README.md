@@ -125,14 +125,14 @@ Si vous préférez utiliser VirtualBox, suivez ces étapes :
 - Allouez de la mémoire (au moins 2048 Mo recommandé).
 - Créez un disque dur virtuel et procédez avec les options par défaut.
 
-### Monter l'ISO :
+### Monter l'ISO :
 
 - Sélectionnez votre nouvelle VM et cliquez sur "Paramètres".
 - Allez dans "Stockage" et cliquez sur le lecteur de CD vide.
 - Cliquez sur l'icône du disque et sélectionnez "Choisir un fichier de disque".
 - Naviguez jusqu'à images/debian-12-amd64-CD-1.iso et sélectionnez-le.
 
-### Démarrer la VM :
+### Démarrer la VM :
 
 Démarrez votre VM et suivez le processus d'installation de Debian.
 
