@@ -118,7 +118,7 @@ Si vous préférez utiliser VirtualBox, suivez ces étapes :
     sudo apt-get install virtualbox
 ```
 
-### Créer une nouvelle VM :
+### Créer une nouvelle VM :
 
 - Ouvrez VirtualBox et cliquez sur "Nouveau".
 - Nommez votre VM et sélectionnez "Linux" comme type et "Debian (64-bit)" comme version.
