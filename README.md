@@ -6,14 +6,6 @@ Cette distribution inclut des outils populaires tels que Docker, Kubernetes, Ans
 
 L'objectif principal de DebianGN est de fournir une solution prête à l'emploi pour les équipes DEVOPS, leur permettant de démarrer rapidement et de bénéficier d'une infrastructure solide et fiable basée sur Debian.
 
-Ce fichier, debianGN.description, contient cette description afin de fournir des informations claires sur le contenu et l'objectif de la distribution DebianGN.Ce projet, nommé DebianGN, est une distribution Debian personnalisée conçue pour répondre aux besoins des professionnels de DEVOPS. Il offre une configuration préinstallée avec une gamme d'outils et de logiciels destinés à faciliter le développement, le déploiement et la gestion des applications.
-
-Cette distribution inclut des outils populaires tels que Docker, Kubernetes, Ansible, Terraform, Git, Jenkins, et bien d'autres, ainsi que des configurations optimisées pour un environnement DEVOPS. 
-
-L'objectif principal de DebianGN est de fournir une solution prête à l'emploi pour les équipes DEVOPS, leur permettant de démarrer rapidement et de bénéficier d'une infrastructure solide et fiable basée sur Debian.
-
-Ce fichier, debianGN.description, contient cette description afin de fournir des informations claires sur le contenu et l'objectif de la distribution DebianGN.
-
 ## Structure du Dépôt
 
 - `debianGN.conf` : Le fichier de configuration principal pour Simple-CDD.
