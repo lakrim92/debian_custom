@@ -32,7 +32,7 @@ Dans `debianGN.conf`, vous pouvez spécifier diverses options et paramètres, te
 
 En résumé, `debianGN.conf` est un fichier qui permet de définir toutes les spécifications nécessaires pour construire une ISO Debian personnalisé.
 
-# Description de DebianGN
+## Description de DebianGN
 
 Le fichier `debianGN.description` contient la description des paquets Debian utilisés dans ce projet DebianGN. Cette description est utilisée pour fournir des informations sur les paquets inclus dans l'ISO personnalisée.
 
@@ -40,7 +40,7 @@ La description des paquets permet aux utilisateurs de comprendre le but et la fo
 
 En résumé, le fichier `debianGN.description` est un composant qui fournit des informations détaillées sur les paquets inclus.
 
-# Scripts de Téléchargement dans `debianGN.downloads/`
+## Scripts de Téléchargement dans `debianGN.downloads/`
 
 Le fichier `debianGN.downloads` contient les scripts de téléchargement utilisés pour récupérer les paquets nécessaires à l'inclusion dans l'ISO personnalisée du projet DebianGN.
 
@@ -48,7 +48,7 @@ Ces scripts automatisent le processus de téléchargement des paquets requis dep
 
 Les scripts de téléchargement peuvent inclure des instructions pour récupérer les paquets depuis les dépôts officiels de Debian, ainsi que des sources tierces si nécessaire. Ils peuvent également effectuer des vérifications de somme de contrôle pour garantir l'intégrité des paquets téléchargés.
 
-# Liste des Paquets dans `debianGN.packages/`
+## Liste des Paquets dans `debianGN.packages/`
 
 Le fichier `debianGN.packages` contient la liste des paquets à inclure dans l'ISO personnalisée du projet DebianGN.
 
@@ -58,7 +58,7 @@ La liste des paquets est généralement définie dans un fichier texte ou un scr
 
 En résumé, le dossier `debianGN.packages` permet de définir précisément les composants logiciels qui seront présents dans l'installation finale.
 
-# Fichier Preseed dans `debianGN.preseed`
+## Fichier Preseed dans `debianGN.preseed`
 
 Le fichier `debianGN.preseed` contient des directives de préconfiguration qui permettent d'automatiser le processus d'installation de Debian.
 
@@ -66,7 +66,7 @@ En utilisant un fichier preseed, vous pouvez spécifier des réponses automatiqu
 
 Le fichier preseed est généralement écrit au format texte et peut être personnalisé en fonction des besoins spécifiques du projet DebianGN. Il est utilisé par l'installateur Debian pendant le processus d'installation pour appliquer automatiquement les configurations prédéfinies, ce qui permet d'installer le système d'exploitation de manière plus rapide et plus cohérente.
 
-# Script Post-installation `post-install.sh`
+## Script Post-installation `post-install.sh`
 
 Le fichier `post-install.sh` est un script conçu pour être exécuté automatiquement après l'installation de Debian à partir de l'ISO personnalisée générée par le projet DebianGN. Ce script permet d'effectuer des tâches supplémentaires de configuration ou d'installation de logiciels une fois que le système de base est installé.
 
@@ -98,7 +98,7 @@ Accédez au répertoire du projet :
 cd ~/workspace/debian_custom/DebianGN-simple-cdd
 ```
 
- Exécutez Simple-CDD avec la configuration fournie :
+Exécutez Simple-CDD avec la configuration fournie :
 
 ```sh
 
@@ -119,18 +119,21 @@ Si vous préférez utiliser VirtualBox, suivez ces étapes :
 ```
 
 ### Créer une nouvelle VM :
+
 - Ouvrez VirtualBox et cliquez sur "Nouveau".
 - Nommez votre VM et sélectionnez "Linux" comme type et "Debian (64-bit)" comme version.
 - Allouez de la mémoire (au moins 2048 Mo recommandé).
 - Créez un disque dur virtuel et procédez avec les options par défaut.
 
 ### Monter l'ISO :
+
 - Sélectionnez votre nouvelle VM et cliquez sur "Paramètres".
 - Allez dans "Stockage" et cliquez sur le lecteur de CD vide.
 - Cliquez sur l'icône du disque et sélectionnez "Choisir un fichier de disque".
 - Naviguez jusqu'à images/debian-12-amd64-CD-1.iso et sélectionnez-le.
 
 ### Démarrer la VM :
+
 Démarrez votre VM et suivez le processus d'installation de Debian.
 
 ## Contribution
