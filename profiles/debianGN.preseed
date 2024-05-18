@@ -1,0 +1,46 @@
+### Localization
+d-i debian-installer/locale string fr_FR.UTF-8
+d-i console-setup/ask_detect boolean false
+d-i console-setup/layoutcode string fr
+d-i keyboard-configuration/xkb-keymap select fr
+
+### Network configuration
+d-i netcfg/choose_interface select auto
+d-i netcfg/get_hostname string debian-gn
+d-i netcfg/get_domain string localdomain
+
+### Mirror settings
+d-i mirror/country string manual
+d-i mirror/http/hostname string deb.debian.org
+d-i mirror/http/directory string /debian
+d-i mirror/http/proxy string
+
+### Clock and time zone setup
+d-i clock-setup/utc boolean true
+d-i time/zone string Europe/Paris
+d-i clock-setup/ntp boolean true
+d-i clock-setup/ntp-server string ntp.ubuntu.com
+
+### Account setup
+d-i passwd/root-login boolean false
+d-i passwd/make-user boolean true
+d-i passwd/user-fullname string Visiteur
+d-i passwd/username string visiteur
+d-i passwd/user-password-crypted password $6$LxsWvMWvgGoJ2Szi$hcgnnI4Uow7z6bHBhgWWKWhAWuAHpbJV.Jm.HZrWcY14AQ5gPEKzUSG4lvFfHzsyCi4/th6B38aqvci5iVxrf1
+d-i passwd/user-default-groups string sudo
+
+### Package selection
+tasksel tasksel/first multiselect standard, gnome-desktop
+# d-i pkgsel/include string zstd gconf2 gconf-service gconf2-common libgconf-2-4
+d-i pkgsel/upgrade select safe-upgrade
+popularity-contest popularity-contest/participate boolean false
+
+### Finishing up the installation
+d-i grub-installer/only_debian boolean true
+d-i grub-installer/with_other_os boolean true
+
+### Preseeding other packages
+d-i preseed/late_command string \
+    in-target apt-get update; \
+    in-target apt-get install -y zstd; \
+    in-target wget -O /home/visiteur/welcome.txt http://example.com/welcome.txt

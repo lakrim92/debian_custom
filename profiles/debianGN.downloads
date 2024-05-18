@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Ajout d'un utilisateur
+add_user() {
+    if ! id "visiteur" &>/dev/null; then
+        useradd -m visiteur -s /bin/bash
+        echo "visiteur:visiteur" | chpasswd
+        usermod -aG sudo visiteur
+        echo "L'utilisateur a été créé avec succès."
+    else
+        echo "L'utilisateur 'visiteur' existe déjà."
+    fi
+}
+
+add_user
+
+# Télécharger et installer Tabby
+wget -O /tmp/tabby.deb https://github.com/Eugeny/tabby/releases/download/v1.0.207/tabby-1.0.207-linux-x64.deb
+dpkg -i /tmp/tabby.deb
+
+# Télécharger et installer VSCodium
+wget -O /tmp/codium.deb https://github.com/VSCodium/vscodium/releases/download/1.89.1.24130/codium_1.89.1.24130_amd64.deb
+dpkg -i /tmp/codium.deb
+
+# Résoudre les dépendances
+apt-get -f install -y
+
+# Copier le script post-installation dans le système cible
+cp /path/to/local/post-install.sh /target/home/visiteur/post_install.sh
+chmod +x /target/home/visiteur/post_install.sh

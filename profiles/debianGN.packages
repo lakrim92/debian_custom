@@ -1,0 +1,5 @@
+# ~/DebianGN-simple-cdd/profiles/debianGN.packages
+wget
+vim
+htop
+git
